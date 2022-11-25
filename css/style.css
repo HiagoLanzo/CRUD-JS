@@ -1,0 +1,237 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(white 60%, #0dadc5 40%);
+  background-repeat: no-repeat;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-family: 'Lexend Deca', sans-serif;
+  color: #333333;
+}
+
+.navbar {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  background-color: #0dadc5;
+}
+
+.title {
+  margin-top: 7px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0dadc5;
+}
+
+.container {
+  background-color: white;
+  height: max-content;
+  padding-bottom: 14px;
+  padding-inline: 14px;
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+  overflow-x: scroll;
+  width: 370px;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 24px;
+  border-radius: 12px;
+  gap: 12x;
+}
+
+.container .pet-info {
+  flex: 0 0 100%;
+  padding: 20px;
+  border-radius: 16px;
+  scroll-snap-align: start;
+}
+
+.pet-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: white;
+  box-shadow: 1px 1px 9px 1px #008094;
+}
+
+.edit {
+  background: none;
+  border: none;
+  text-decoration: underline;
+  color: #58A764;
+  font-size: 16px;
+}
+
+.delete {
+  background: none;
+  border: none;
+  text-decoration: underline;
+  color: #E77979;
+  font-size: 16px;
+}
+
+h4,
+h2 {
+  letter-spacing: 1px;
+  font-size: 18px;
+  text-align: justify;
+  color: #0dadc5;
+}
+
+.photo-pet {
+  width: 240px;
+  height: 340px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+p {
+  text-align: left;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: justify;
+}
+
+span {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+table th {
+  padding: 10px;
+}
+
+ul li {
+  margin: 10px;
+  text-align: justify;
+}
+
+button {
+  padding: 10px;
+}
+
+#savePet,
+#myBtn {
+  width: 100%;
+  margin-top: 0px;
+  color: white;
+  letter-spacing: 1px;
+  background-color: #0dadc5;
+  border-radius: 8px;
+  font-size: 16;
+  padding: 16px;
+  border: none;
+  text-decoration: underline;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-pet {
+  width: 100%;
+  padding: 15px;
+  border: solid 1px #0dadc5;
+  border-radius: 4px;
+  font: inherit;
+  color: #008094;
+  background-color: transparent;
+  outline: 2px solid #fff;
+}
+
+.input-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 5px;
+  margin-left: 10px;
+  transform: translate(10px, 10px);
+  transition: transform 0.25s;
+}
+
+.input-pet:focus {
+  border: solid 2px #0dadc5;
+  transition: transform 0.25;
+}
+
+.input-pet:focus + .input-label,
+.input-pet:valid + .input-label {
+  transform: translate(-5px, -20px) scale(0.8);
+  color: #0dadc5;
+  padding-inline: 5px;
+  background-color: #ffffff;
+}
+
+.input-pet:is(:focus, :valid) {
+  out-color: #d1c5fc;
+}
+
+.contato,
+#savepet {
+  display: block;
+  width: 100%;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 1px;
+  background-color: #0dadc5;
+  border-radius: 8px;
+  font-size: 14;
+  padding: 12px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fefefe;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: max-content;
+  height: max-content;
+}
+
+/* The Close Button */
+.close {
+  color: red;
+  float: right;
+  letter-spacing: 1px;
+  text-decoration: underline;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.div-info {
+  position: absolute;
+  bottom: 105px;
+  left: 39%;
+  right: auto;
+  width: 390px;
+  height: 303px;
+}
